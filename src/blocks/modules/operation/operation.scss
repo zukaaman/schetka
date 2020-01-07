@@ -1,0 +1,122 @@
+.operation {
+  padding: 70px 0 20px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .operation__text-block {
+    flex-basis: 41%;
+  }
+
+  .operation__top-text {
+    color: #4f4f4f;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.16px;
+  }
+
+  .operation__title {
+    margin-top: 5px;
+
+    color: #4f4f4f;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .operation__button {
+    padding: 18px 65px;
+    margin-top: 60px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.45px;
+
+    box-shadow: 0 10px 30px rgba(72, 74, 210, 0.27);
+    border-radius: 28px;
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, #7273f1 0%, #9a9afa 100%);
+
+    &:hover {
+      color: #7273f1;
+
+      background-image: linear-gradient(to right, rgba(114,115,241,0.1) 0%, rgba(154,154,250,0.1) 100%);
+
+      transition: 0.3s;
+    }
+  }
+
+  .operation__list {
+    flex-basis: 57%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .operation__item {
+    position: relative;
+
+    flex-basis: 41%;
+    margin-bottom: 80px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 60px;
+      height: 60px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-of-type(1)::before {
+      background-image: url("../img/operation-img1.png");
+    }
+
+    &:nth-of-type(2)::before {
+      background-image: url("../img/operation-img2.png");
+    }
+
+    &:nth-of-type(3)::before {
+      background-image: url("../img/operation-img3.png");
+    }
+
+    &:nth-of-type(4)::before {
+      background-image: url("../img/operation-img4.png");
+    }
+  }
+
+  .operation__item-num {
+    color: #4f4f4f;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.16px;
+  }
+
+  .operation__item-name {
+    margin-top: 5px;
+
+    color: #4f4f4f;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+  }
+
+  .operation__item-text {
+    margin-top: 60px;
+
+    color: #969696;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.14px;
+  }
+}
