@@ -1,9 +1,17 @@
 .contacts {
   padding-bottom: 200px;
 
+  @include m-900 {
+    padding-bottom: 70px;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
+
+    @include m-900 {
+      flex-direction: column-reverse;
+    }
   }
 
   .contacts__map {
@@ -16,6 +24,22 @@
     background-position: center;
 
     box-shadow: 0 25px 30px rgba(26, 36, 101, 0.1);
+
+    @include m-900 {
+      width: 100%;
+      margin-top: 80px;
+    }
+  }
+
+  .contacts__text-block {
+
+    @include m-1200 {
+      margin-left: 40px;
+    }
+
+    @include m-900 {
+      margin-left: 0;
+    }
   }
 
   .contacts__title {
@@ -126,6 +150,10 @@
       background-image: linear-gradient(to right, rgba(114,115,241,0.1) 0%, rgba(154,154,250,0.1) 100%);
 
       transition: 0.3s;
+    }
+
+    @include m-900 {
+      margin-top: 40px;
     }
   }
 }

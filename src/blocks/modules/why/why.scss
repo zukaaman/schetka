@@ -6,6 +6,10 @@
   background-size: cover;
   background-position: center;
 
+  @include m-900 {
+    padding: 60px 0 20px;
+  }
+
   .why__list {
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +19,15 @@
   .why__item {
     flex-basis: 31%;
     margin-bottom: 70px;
+
+    @include m-900 {
+      flex-basis: 45%;
+      margin-bottom: 40px;
+    }
+
+    @include m-600 {
+      flex-basis: 100%;
+    }
   }
 
   .why__title {
@@ -39,6 +52,10 @@
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.45px;
+
+    @include m-600 {
+      margin-top: 10px;
+    }
   }
 
   .why__item-text {
@@ -49,5 +66,9 @@
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.45px;
+
+    @include m-600 {
+      margin-top: 20px;
+    }
   }
 }

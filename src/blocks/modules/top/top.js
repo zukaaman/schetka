@@ -1,13 +1,11 @@
-modules.define('top', ['i-bem-dom'], function(provide, bemDom) {
+// for top
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
+var topButton = document.querySelector(".top__button");
+var modal = document.querySelector(".modal");
+var modalOverlay = document.querySelector(".modal-overlay");
 
+topButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modal.classList.add("modal--active");
+  modalOverlay.classList.add("modal-overlay--active");
 });

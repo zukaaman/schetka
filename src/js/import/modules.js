@@ -1,2 +1,7 @@
-import "%modules%/header/header";
-import "%modules%/footer/footer"
+import "%modules%/header/header"
+import "%modules%/top/top"
+import "%modules%/service/service"
+import "%modules%/operation/operation"
+import "%modules%/reviews/reviews"
+import "%modules%/contacts/contacts"
+import "%modules%/modal/modal"

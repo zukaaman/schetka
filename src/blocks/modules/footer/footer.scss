@@ -3,21 +3,39 @@
 
   background-color: #363636;
 
+  @include m-600 {
+    padding-top: 30px;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
+
+    @include m-600 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .footer__policy {
     color: #676767;
     font-size: 14px;
     font-weight: 400;
+
+    @include m-600 {
+      margin-top: 20px;
+      order: 2;
+    }
   }
 
   .footer__socials {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include m-600 {
+      order: 1;
+    }
   }
 
   .footer__social {
@@ -65,5 +83,10 @@
     color: #676767;
     font-size: 14px;
     font-weight: 400;
+
+    @include m-600 {
+      margin-top: 20px;
+      order: 3;
+    }
   }
 }

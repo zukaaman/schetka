@@ -1,8 +1,20 @@
 .about {
   padding: 70px 0 30px;
 
+  @include m-900 {
+    padding: 70px 0 0;
+  }
+
   .container {
     display: flex;
+
+    @include m-1200 {
+      justify-content: space-between;
+    }
+
+    @include m-900 {
+      flex-direction: column-reverse;
+    }
   }
 
   .about__img {
@@ -15,7 +27,16 @@
     border-radius: 10px;
 
     img {
-      object-fit: contain;
+      object-fit: cover;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    @include m-900 {
+      width: 100%;
+      height: 500px;
+      margin-top: 40px;
     }
   }
 
@@ -23,6 +44,18 @@
     margin-left: 130px;
     padding-top: 30px;
     max-width: 465px;
+
+    @include m-1200 {
+      flex-basis: 50%;
+      margin-left: 3%;
+      max-width: none;
+    }
+
+    @include m-900 {
+      width: 100%;
+      margin-left: 0;
+      padding-top: 0;
+    }
   }
 
   .about__title {
@@ -41,6 +74,10 @@
     font-weight: 600;
     line-height: 22px;
     letter-spacing: 0.16px;
+
+    @include m-900 {
+      margin-bottom: 40px;
+    }
   }
 
   .about__text {

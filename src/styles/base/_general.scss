@@ -29,6 +29,16 @@ ul {
 .container {
   margin: 0 auto;
   width: 1170px;
+
+  @include m-1200 {
+    width: auto;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  @include m-600 {
+    padding: 0 15px;
+  }
 }
 
 button,
