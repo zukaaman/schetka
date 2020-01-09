@@ -9,4 +9,3 @@ reviewsButton.addEventListener("click", function (evt) {
   modal.classList.add("modal--active");
   modalOverlay.classList.add("modal-overlay--active");
 });
-
