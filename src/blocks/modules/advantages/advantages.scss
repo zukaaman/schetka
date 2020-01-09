@@ -3,6 +3,14 @@
 
   height: 270px;
 
+  @include m-900 {
+    height: 380px;
+  }
+
+  @include m-600 {
+    height: 600px;
+  }
+
   .advantages__list {
     position: absolute;
     top: -150px;
@@ -16,6 +24,26 @@
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 10px 130px 60px rgba(26, 36, 101, 0.1);
+
+    @include m-1200 {
+      left: 30px;
+      width: calc(100% - 60px);
+    }
+
+    @include m-900 {
+      top: -80px;
+
+      flex-wrap: wrap;
+      padding-top: 40px;
+    }
+
+    @include m-600 {
+      left: 15px;
+
+
+      padding-top: 0;
+      width: calc(100% - 30px);
+    }
   }
 
   .advantages__item {
@@ -23,6 +51,15 @@
     flex-direction: column;
     align-items: center;
     flex-basis: 17%;
+
+    @include m-900 {
+      flex-basis: 45%;
+      margin-top: 50px;
+    }
+
+    @include m-600 {
+      flex-basis: 100%;
+    }
 
     &:last-child {
 
