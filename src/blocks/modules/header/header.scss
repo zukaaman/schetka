@@ -27,6 +27,18 @@
   .header__nav {
     display: flex;
 
+    &.header__nav--active {
+      max-height: 100vh;
+
+      transition: 0.3s;
+
+      .header__nav-link {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+
     @include m-900 {
       position: fixed;
       top: 0;
@@ -35,15 +47,17 @@
 
       width: 100%;
       height: 100vh;
-      // display: none;
-      // margin-left: -30px;
+      flex-direction: column;
+      align-items: center;
+      max-height: 0;
 
       background-color: #000000;
       background-image: linear-gradient(to right, #7273f1 0%, #9a9afa 100%);
+
+      transition: 0.3s;
     }
 
     @include m-600 {
-      // margin-left: -15px;
     }
   }
 
@@ -60,8 +74,24 @@
       margin-left: 2vw;
     }
 
+    @include m-900 {
+      margin-top: 5vh;
+      margin-left: 0;
+
+      font-size: 30px;
+      letter-spacing: 0.41px;
+
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.1s;
+    }
+
     &:first-child {
       margin-left: 0;
+
+      @include m-900 {
+        margin-top: 20vh;
+      }
     }
   }
 
@@ -76,8 +106,24 @@
     letter-spacing: 0.45px;
     text-decoration: none;
 
+    &.header__phone--active {
+      position: fixed;
+      bottom: 15%;
+      left: calc((100% - 192px) / 2);
+      z-index: 20;
+
+      // margin-top: 5vh;
+
+      visibility: visible;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
     @include m-900 {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+
+      transition: 0.1s;
     }
 
     &::before {
@@ -98,6 +144,7 @@
 
   .header__nav-button {
     position: relative;
+    z-index: 20;
 
     display: none;
 
@@ -105,6 +152,26 @@
     height: 4px;
 
     background-color: #ffffff;
+
+    transition: 0.3s;
+
+    &.header__nav-button--active {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+
+        transform: rotate(45deg);
+        transition: 0.3s;
+      }
+
+      &::after {
+        bottom: 0;
+
+        transform: rotate(135deg);
+        transition: 0.3s;
+      }
+    }
 
     @include m-900 {
       display: block;

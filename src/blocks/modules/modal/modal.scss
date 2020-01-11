@@ -1,7 +1,7 @@
 .modal {
   position: fixed;
-  top: calc((100% - 520px) / 2);
-  left: calc((100% - 440px) / 2);
+  top: calc((100% - 433px) / 2);
+  left: calc((100% - 410px) / 2);
   z-index: 100;
 
   width: 410px;
@@ -120,5 +120,7 @@
     opacity: 1;
 
     transition: 0.3s;
+
+    overflow-y: hidden;
   }
 }
